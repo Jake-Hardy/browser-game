@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.console--input {
+    width: 80%;
+    margin: .5rem auto;
+    height: 1.5rem;
+}
+
+.container__gui {
+    width: 80%;
+
+    margin: 1rem auto;
+
+    display: flex;
+    border: 1px solid #cdcdcd;
+}
+
+.console--window {
+    width: 60%;
+    height: 26rem;
+
+    /*margin: 3rem auto;*/
+
+    background-color: black;
+    /*border: 2px solid #333;*/
+    color: white;
+    display: inline-block;
+    overflow-y: scroll;
+
+    font-family: 'VT323', monospace;
+    font-size: 1.3rem;
+}
+
+.console--container__input {
+    width: 84.5%;
+
+    margin: 1rem 10%;
+
+    display: inline-block;
+}
+
+.console--info-panel {
+    margin-top: 2rem;
+    margin-left: 1rem;
+
+    text-align: left;
+    font-family: 'VT323', monospace;
+    color: white;
+}
+
+
+.info {
+    display: block;
+}
+
+.container__map {
+    width: 40%;
+    height: 26rem;
+
+    /*margin-left: 25%;*/
+
+    display: inline-block;
+    /*border: 1px solid #cdcdcd;*/
+    border-left: 3px solid #cdcdcd;
+    font-family: monospace;
+    letter-spacing: 3px;
+    text-align: center;
+
+    background-color: black;
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+.tile {
+    color: black;
+}
+
+
+
+.button {
+    width: 10rem;
+
+
+    padding: .3rem 0;
+
+    display: inline-block;
+
+    background-color: #04BAEF;
+    text-align: center;
+    border: 2px solid #04BAEF;
+    border-radius: 3px;
+    font-family: 'VT323', monospace;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+    line-height: 1.3rem;
+
+    transition: all .5s;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.button:active {
+    transition: all .2s ease-out;
+    transform: scale(.9, .9);
+    background-color: #04BAEF;
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .console--window,
+    .console--container__input,
+    .console--input,
+    .button__submit,
+    .container__gui,
+    .container__map {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .container__map {
+        height: 20rem;
+    }
+
+    .console--window {
+        height: 5rem;
+    }
+}
